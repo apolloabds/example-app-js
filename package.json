@@ -1,5 +1,5 @@
 {
-  "name": "example-app-js",
+  "name": "js-example-app",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -14,13 +14,12 @@
   "volta": {
     "node": "14.18.1"
   },
-  "dependencies": {
-    "@abds/components": "rc"
-  },
   "devDependencies": {
+    "@abds/components": "rc",
     "http-server": "^14.0.0",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0"
-  }
+    "webpack-dev-server": "4.7.4"
+  },
+  "keywords": []
 }
