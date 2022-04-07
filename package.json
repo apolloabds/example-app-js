@@ -1,0 +1,26 @@
+{
+  "name": "example-app-js",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "start:static": "http-server ./dist",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "volta": {
+    "node": "14.18.1"
+  },
+  "dependencies": {
+    "@abds/components": "rc"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
