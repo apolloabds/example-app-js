@@ -1,25 +1,30 @@
 {
-  "name": "js-example-app",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
-    "start:static": "http-server ./dist",
-    "build": "webpack"
-  },
   "author": "",
-  "license": "ISC",
-  "volta": {
-    "node": "14.18.1"
+  "dependencies": {
+    "@abds/components": "rc"
   },
+  "description": "",
   "devDependencies": {
-    "@abds/components": "rc",
+    "css-loader": "^6.7.1",
     "http-server": "^14.0.0",
+    "prettier": "^2.7.1",
+    "style-loader": "^3.3.1",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "4.7.4"
   },
-  "keywords": []
+  "keywords": [],
+  "license": "ISC",
+  "name": "js-example-app",
+  "private": true,
+  "scripts": {
+    "build": "webpack --output-path ./dist",
+    "start": "webpack serve --open",
+    "start:static": "http-server ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0",
+  "volta": {
+    "node": "14.18.1"
+  }
 }
