@@ -90,6 +90,39 @@
         </form>
       </section>
 
+      <section id="contact-us">
+        <form class="flex flex-col gap-y-4">
+          <h2>Contact Us</h2>
+
+          <div class="flex gap-x-4">
+            <abds-input
+              name="first-name"
+              maxlength="10"
+              minlength="3"
+              pattern="[A-Z|a-z]+"
+              pattern-message="Must contain letters only"
+            >
+              First Name
+            </abds-input>
+            <abds-input name="last-name" pattern="[A-Z|a-z]+" required>Last Name</abds-input>
+          </div>
+
+          <div class="flex gap-x-4">
+            <abds-input name="street" pattern="\w+(\s\w+){2,}" required>Street</abds-input>
+            <abds-input name="city" pattern="[A-Z|a-z|\s]+" required>City</abds-input>
+            <abds-select id="states" label="State" name="state" placeholder="Select a state" required>
+              <!-- Default options if API results are unavailable. -->
+              <abds-select-option value="cali">California</abds-select-option>
+              <abds-select-option value="denver">Denver</abds-select-option>
+              <abds-select-option value="new york">New York</abds-select-option>
+              <abds-select-option value="tx">Texas</abds-select-option>
+            </abds-select>
+          </div>
+
+          <abds-button type="submit">Submit</abds-button>
+        </form>
+      </section>
+
       <section class="flex gap-x-4" id="toggle-playground">
         <abds-switch id="toggle-theme">Toggle theme</abds-switch>
       </section>
