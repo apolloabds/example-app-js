@@ -1,7 +1,7 @@
 {
   "author": "",
   "dependencies": {
-    "@abds/components": "rc"
+    "@abds/components": "latest"
   },
   "description": "",
   "devDependencies": {
