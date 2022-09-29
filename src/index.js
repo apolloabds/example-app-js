@@ -83,33 +83,18 @@ const initializers = {
         .then((states) => {
           const abdsSelect = document.querySelector('abds-select#states');
 
-          const hiddenSelect = abdsSelect?.querySelector('select');
-          const hiddenSelectOptions = hiddenSelect?.querySelectorAll('option');
-          const hiddenSelectPlaceholder = Array.from(hiddenSelectOptions).filter((option) =>
-            option.classList.contains('placeholder')
-          )[0];
+          if (abdsSelect) {
+            abdsSelect.innerHTML = '';
 
-          if (abdsSelect) abdsSelect.innerHTML = '';
+            states.forEach(({ state_name: state }) => {
+              const abdsSelectOption = document.createElement('abds-select-option');
 
-          abdsSelect?.appendChild(hiddenSelect);
+              abdsSelectOption.innerText = state;
+              abdsSelectOption.setAttribute('value', state);
 
-          if (hiddenSelect) hiddenSelect.innerHTML = '';
-
-          hiddenSelect?.appendChild(hiddenSelectPlaceholder);
-
-          states.forEach(({ state_name: state }) => {
-            const option = document.createElement('option');
-            const abdsOption = document.createElement('abds-select-option');
-
-            abdsOption.innerText = state;
-            abdsOption.setAttribute('value', state);
-
-            option.innerText = state;
-            option.setAttribute('value', state);
-
-            abdsSelect?.appendChild(abdsOption);
-            hiddenSelect?.appendChild(option);
-          });
+              abdsSelect.appendChild(abdsSelectOption);
+            });
+          }
         })
         .catch((error) => console.error('error', error));
     };
