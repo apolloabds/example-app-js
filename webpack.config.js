@@ -20,4 +20,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+  resolve: {
+    alias: {
+      '@abds/components': path.resolve(__dirname, './../../abc/apollo/packages/components/'),
+    },
+    extensions: ['.ts', '.js'],
+  },
 };
