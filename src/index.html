@@ -103,12 +103,12 @@
             >
               First Name
             </abds-input>
-            <abds-input name="last-name" pattern="[A-Z|a-z]+" required>Last Name</abds-input>
+            <abds-input name="last-name" pattern="[A-Z|a-z]+">Last Name</abds-input>
           </div>
 
           <div class="flex gap-x-4">
-            <abds-input name="street" pattern="\w+(\s\w+){2,}" required>Street</abds-input>
-            <abds-input name="city" pattern="[A-Z|a-z|\s]+" required>City</abds-input>
+            <abds-input name="street" pattern="\w+(\s\w+){2,}">Street</abds-input>
+            <abds-input name="city" pattern="[A-Z|a-z|\s]+">City</abds-input>
             <abds-select id="states" label="State" name="state" placeholder="-- Select a state --" required>
               <!-- Default options if API results are unavailable. -->
               <abds-select-option value="cali">California</abds-select-option>
@@ -116,11 +116,46 @@
               <abds-select-option value="new york">New York</abds-select-option>
               <abds-select-option value="tx">Texas</abds-select-option>
             </abds-select>
+            <abds-input name="trips" type="number" value="1" max="7" min="0">Weekly Grocery Trips</abds-input>
           </div>
 
           <abds-button type="submit">Submit</abds-button>
         </form>
       </section>
+
+      <section>
+        <h2>Change Password</h2>
+        <form class="flex gap-x-4 mt-4">
+          <abds-input autocomplete="off" name="oldPassword" required type="password">Old Password</abds-input>
+          <abds-input
+            autocomplete="off"
+            helper-text="Must include any 8 characters"
+            name="newPassword"
+            pattern-message="Enter at least 8 characters"
+            pattern="[a-zA-Z0-9]{8,}"
+            required
+            type="password"
+          >
+            New Password
+          </abds-input>
+          <abds-button-icon
+            appearance="solid"
+            class="self-center"
+            icon="arrow-right"
+            palette="brand"
+          ></abds-button-icon>
+        </form>
+      </section>
+
+      <section>
+        <h2>Color search</h2>
+        <form class="flex gap-x-4 mt-4">
+          <abds-input name="color" type="search" id="color-search-input">Type to search for a color</abds-input>
+          <abds-button-icon appearance="solid" class="self-end" icon="arrow-right" palette="brand"></abds-button-icon>
+        </form>
+      </section>
+
+      <p class="max-w-md" id="color-search-text">Red White Cyan Silver Blue Gray DarkBlue Black LightBlue Orange Purple Brown Yellow Maroon Lime Green Magenta Olive Pink Aquamarine</p>
 
       <section class="flex gap-x-4" id="toggle-playground">
         <abds-switch id="toggle-theme">Toggle theme</abds-switch>

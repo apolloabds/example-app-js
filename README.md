@@ -5,8 +5,8 @@
 Install the dependencies and start the server.
 
 ```sh
-npm install
-npm start
+yarn
+yarn start
 ```
 
 The last command should open your browser and navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.

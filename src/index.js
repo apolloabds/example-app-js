@@ -4,6 +4,17 @@ import { defineCustomElements } from '@abds/components/dist/loader/index.js';
 defineCustomElements();
 
 const initializers = {
+  colorSearch: () => {
+    const colorSearchInput = document.querySelector('#color-search-input');
+    const colorSearchText = document.querySelector('#color-search-text');
+    const initialColors = colorSearchText.innerHTML.split(' ');
+
+    colorSearchInput.addEventListener('abdsInput', (event) => {
+      const results = initialColors.filter((color) => color.toLowerCase().includes(event.target.value.toLowerCase()));
+
+      colorSearchText.innerHTML = results.length ? results.join(' ') : 'No results. Do you know your colors?';
+    });
+  },
   modal: () => {
     const toggleModalButton = document.querySelector('#toggle-modal');
     const toggleModal = () => {

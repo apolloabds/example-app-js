@@ -6,6 +6,7 @@
   "description": "",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.0.0",
     "prettier": "^2.7.1",
     "style-loader": "^3.3.1",
@@ -25,6 +26,7 @@
   },
   "version": "1.0.0",
   "volta": {
-    "node": "14.18.1"
+    "node": "14.18.1",
+    "yarn": "1.22.10"
   }
 }
